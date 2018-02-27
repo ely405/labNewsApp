@@ -16,7 +16,7 @@ const OpinionNews = (props) => {
 			0: 'news-25.png',
 			classElement: 'col-md-3',
 			classImg: 'h-medium',
-			classCard: '',			
+			classCard: '',
 		}, {
 			1: 'news-26.png',
 			classElement: 'col-md-3',
@@ -25,17 +25,17 @@ const OpinionNews = (props) => {
 			2: 'news-27.png',
 			classElement: 'col-md-3 flex-row flex-md-column',
 			classImg: 'h-small h-md-medium',
-			classCard: 'col-6 col-md-12',			
+			classCard: 'col-6 col-md-12',
 		}, {
 			3: 'news-28.png',
 			classElement: 'col-12 d-md-none d-lg-none flex-row flex-md-column',
 			classImg: 'h-small h-md-medium',
-			classCard: 'col-6 col-md-12',			
+			classCard: 'col-6 col-md-12',
 		}, {
 			4: 'news-31.png',
 			classElement: 'col-md-3 flex-row flex-md-column',
-			classImg: 'h-small col-md-12',
-			classCard: 'col-6 col-md-12',			
+			classImg: 'h-small col-md-12 h-md-medium',
+			classCard: 'col-6 col-md-12',
 		},
 	];
 

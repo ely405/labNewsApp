@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import $ from 'jquery';
 
 import setNewState from '../utils/setNewState';
@@ -11,7 +11,6 @@ import News17Img from '../../img/news/news-17.png';
 import News18Img from '../../img/news/news-18.png';
 
 const TechNews = (props) => {
-	// console.log('TechElements', props.TechElements);
 	const leftColumn = [
 		{
 			0: 'news-14.png',
@@ -73,7 +72,7 @@ const TechNews = (props) => {
 			if (imgName === el[ind]) {
 				return (
 					<BaseNews
-					id={`world-${name[0]}`}
+						id={`world-${name[0]}`}
 						key={i}
 						imgUrl={`img/${element.img}`}
 						title={element.title}

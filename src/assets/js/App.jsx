@@ -13,8 +13,6 @@ import OpinionNews from './components/OpinionNews.jsx';
 import Carousel from './components/Carousel.jsx';
 import Footer from './components/Footer.jsx';
 
-const ROUTE_NEWS = './news';
-
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -48,7 +46,6 @@ class App extends Component {
 		});
 
 		$.get('/api/news/', (response) => {
-			console.log('response', response);
 			$.each(response, (i, data) => {
 				$.each(data.categories, (ind, categorie) => {
 					if (categorie === 0) {
@@ -73,7 +70,7 @@ class App extends Component {
 		return (
 			<div>
 				<Menu/>
-				<div className='container' id='app'>
+				<div className='container-fluid' id='app'>
 					<LatestNewsSection latestElements={this.state.latestNews}/>
 					<WorldNews worldElements={this.state.worldNews} title={this.state.worldTitle}/>
 					<TechNews techElements={this.state.techNews} title={this.state.techTitle}/>

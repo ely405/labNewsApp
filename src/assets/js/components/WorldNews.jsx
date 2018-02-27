@@ -27,7 +27,7 @@ const WorldNews = (props) => {
 
 	const firstColumnElements = props.worldElements.map((element, i) => {
 		const imgName = element.img;
-		const name = imgName.split('.');		
+		const name = imgName.split('.');
 		const elements = firstColumn.map((el, ind) => {
 			if (imgName === el[ind]) {
 				return (
@@ -75,7 +75,6 @@ const WorldNews = (props) => {
 	const secondColumnElements = props.worldElements.map((element, i) => {
 		const imgName = element.img;
 		const name = imgName.split('.');
-		// id={`world-${name[0]}`}
 		const elements = secondColumn.map((el, ind) => {
 			if (imgName === el[ind]) {
 				return (
@@ -105,7 +104,7 @@ const WorldNews = (props) => {
 
 	const thirdColumnElements = props.worldElements.map((element, i) => {
 		const imgName = element.img;
-		const name = imgName.split('.');		
+		const name = imgName.split('.');
 		const elements = thirdColumn.map((el, ind) => {
 			if (imgName === el[ind]) {
 				return (
@@ -127,6 +126,7 @@ const WorldNews = (props) => {
 		{
 			0: 'news-10.png',
 			classElement: 'col-md-3 d-none  d-md-block',
+			classImg: 'h-small',
 		}, {
 			1: 'news-11.png',
 			classElement: 'col-md-3 d-none d-md-block',
@@ -141,7 +141,7 @@ const WorldNews = (props) => {
 
 	const rowBottonElements = props.worldElements.map((element, i) => {
 		const imgName = element.img;
-		const name = imgName.split('.');		
+		const name = imgName.split('.');
 		const elements = rowBotton.map((el, ind) => {
 			if (imgName === el[ind]) {
 				return (
@@ -163,11 +163,11 @@ const WorldNews = (props) => {
 		<div id='world'>
 			<h1>{props.title}</h1>
 			<div className='d-flex flex-wrap'>
-					{firstColumnElements}
+				{firstColumnElements}
 				<div className='col-md-6 d-flex flex-wrap p-0'>
 					{secondColumnElements}
 				</div>
-					{thirdColumnElements}
+				{thirdColumnElements}
 			</div>
 			<div className='d-flex flex-wrap'>
 				{rowBottonElements}

@@ -12,7 +12,7 @@ import rightArrow from '../../img/flecha2.png';
 
 
 const Carousel = (props) => {
-	$('#carouselExample').on('slide.bs.carousel', (e) => {
+	$('#carouselNews').on('slide.bs.carousel', (e) => {
 		const carouselElement = $(e.relatedTarget);
 		const idElement = carouselElement.index();
 		const itemsPerSlide = 3;
@@ -21,8 +21,7 @@ const Carousel = (props) => {
 		if (idElement >= totalItems - (itemsPerSlide - 1)) {
 			const it = itemsPerSlide - (totalItems - idElement);
 			for (let i = 0; i < it; i++) {
-				// append slides to end
-				if (e.direction == 'left') {
+				if (e.direction === 'left') {
 					$('.carousel-item').eq(i).appendTo('.carousel-inner');
 				} else {
 					$('.carousel-item').eq(0).appendTo('.carousel-inner');
@@ -71,15 +70,15 @@ const Carousel = (props) => {
 
 	return (
 		<div className="container-fluid d-none d-sm-block p-0">
-			<div id="carouselExample" className="carousel slide" data-ride="carousel" data-interval="9000">
+			<div id="carouselNews" className="carousel slide" data-ride="carousel" data-interval="9000">
 				<div className="carousel-inner row w-100 mx-auto" role="listbox">
 					{carouselItems}
 				</div>
-				<a className="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+				<a className="carousel-control-prev" href="#carouselNews" role="button" data-slide="prev">
 					<img src={leftArrow} alt='Flecha hacia la izquierda'/>
 					<span className="sr-only">Previous</span>
 				</a>
-				<a className="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+				<a className="carousel-control-next text-faded" href="#carouselNews" role="button" data-slide="next">
 					<img src={rightArrow} alt='Flecha hacia la derecha'/>
 					<span className="sr-only">Next</span>
 				</a>

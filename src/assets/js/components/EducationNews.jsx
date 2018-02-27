@@ -1,5 +1,4 @@
 import React from 'react';
-// import $ from 'jquery';
 
 import setNewState from '../utils/setNewState';
 import BaseNews from './BaseNews.jsx';
@@ -28,7 +27,7 @@ const EducationNews = (props) => {
 			2: 'news-23.png',
 			classElement: 'col-md-12',
 			classImg: 'h-small',
-			classCard: '',			
+			classCard: '',
 		},
 	];
 
@@ -39,9 +38,9 @@ const EducationNews = (props) => {
 			if (imgName === el[ind]) {
 				return (
 					<BaseNews
-					id={`world-${name[0]}`}				
+						id={`world-${name[0]}`}
 						key={i}
-						id={`world-${name[0]}`}						
+						id={`world-${name[0]}`}
 						imgUrl={`img/${element.img}`}
 						title={element.title}
 						classStyle={el.classElement}
@@ -77,7 +76,7 @@ const EducationNews = (props) => {
 			if (imgName === el[ind]) {
 				return (
 					<BaseNews
-					id={`world-${name[0]}`}
+						id={`world-${name[0]}`}
 						key={i}
 						imgUrl={`img/${element.img}`}
 						title={element.title}
